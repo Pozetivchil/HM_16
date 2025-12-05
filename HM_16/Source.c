@@ -35,6 +35,8 @@ int main()
     full_elements(array_a, size_a);
     full_elements(array_b, size_b);
     full_elements(array_c, size_c);
+
+    puts("Массивы до удаления наименьшего элемента: ");
     put_elements(array_a, size_a);
     put_elements(array_b, size_b);
     put_elements(array_c, size_c);
