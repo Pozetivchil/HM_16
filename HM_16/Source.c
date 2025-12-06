@@ -36,7 +36,7 @@ int main()
     full_elements(array_b, size_b);
     full_elements(array_c, size_c);
 
-    puts("Массивы до удаления наименьшего элемента: ");
+    puts("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: ");
     put_elements(array_a, size_a);
     put_elements(array_b, size_b);
     put_elements(array_c, size_c);
@@ -50,13 +50,13 @@ int main()
     int min_index_c = find_min_index(array_c, size_c);
     array_c = delete_k(array_c, &size_c, min_index_c);
 
-    printf("Массив A после удаления минимума:\n");
+    printf("пїЅпїЅпїЅпїЅпїЅпїЅ A пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:\n");
     put_elements(array_a, size_a);
 
-    printf("Массив B после удаления минимума:\n");
+    printf("пїЅпїЅпїЅпїЅпїЅпїЅ B пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:\n");
     put_elements(array_b, size_b);
 
-    printf("Массив C после удаления минимума:\n");
+    printf("пїЅпїЅпїЅпїЅпїЅпїЅ C пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:\n");
     put_elements(array_c, size_c);
 
     int size_d;
@@ -68,7 +68,7 @@ int main()
         return -1;
     }
 
-    printf("Объединенный массив D:\n");
+    printf("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ D:\n");
     put_elements(array_d, size_d);
 
     free(array_a);
@@ -118,7 +118,8 @@ double* merge_arrays(double* a, int size_a, double* b, int size_b, double* c, in
     return result;
 }
 
-double* insert(double* ptr_arr, int* size, int index, double num) {
+double* insert(double* ptr_arr, int* size, int index, double num) 
+{
     double* ptr_arr_n = (double*)realloc(ptr_arr, ((*size) + 1) * sizeof(double));
     if (ptr_arr_n == NULL)
         return NULL;
@@ -130,7 +131,8 @@ double* insert(double* ptr_arr, int* size, int index, double num) {
     return ptr_arr;
 }
 
-double* delete_k(double* ptr_arr, int* size, int k) {
+double* delete_k(double* ptr_arr, int* size, int k) 
+{
     for (int i = k; i < ((*size) - 1); i++) {
         ptr_arr[i] = ptr_arr[i + 1];
     }
@@ -144,14 +146,16 @@ double* delete_k(double* ptr_arr, int* size, int k) {
     return ptr_arr;
 }
 
-double* full_elements(double* ptr_array, int size) {
+double* full_elements(double* ptr_array, int size) 
+{
     for (int i = 0; i < size; i++) {
         ptr_array[i] = (double)rand() / RAND_MAX * 2 - 1;
     }
     return ptr_array;
 }
 
-double* calc_elements(double* ptr_array, int size) {
+double* calc_elements(double* ptr_array, int size) 
+{
     double* temp_array;
     temp_array = (double*)malloc(size * sizeof(double));
     if (temp_array == NULL) {
@@ -167,9 +171,11 @@ double* calc_elements(double* ptr_array, int size) {
     return temp_array;
 }
 
-int put_elements(double* ptr_array, int size) {
+int put_elements(double* ptr_array, int size) 
+{
     printf("\n");
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < size; i++) 
+    {
         printf("%.2lf \t", ptr_array[i]);
     }
     printf("\n");
